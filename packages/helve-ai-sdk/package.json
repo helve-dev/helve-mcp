@@ -1,7 +1,7 @@
 {
   "name": "@helve-dev/ai-sdk",
-  "version": "0.1.1",
-  "description": "Vercel AI SDK tools for Helve — the metered pay-per-call all-tools gateway and tool-search API for AI agents.",
+  "version": "0.1.2",
+  "description": "Vercel AI SDK tools for Helve \u2014 the metered pay-per-call all-tools gateway and tool-search API for AI agents.",
   "type": "module",
   "main": "./src/index.mjs",
   "exports": {
