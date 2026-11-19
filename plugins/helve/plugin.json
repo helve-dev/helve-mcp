@@ -1,48 +1,121 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "helve",
-  "version": "2.0.2",
-  "description": "Pay-per-call AI tool gateway (313 tools across 255 providers) with prepaid $10/$25/$100 packs, per-key spend_limit_usd caps (402 spend_limit_exceeded), and $0 failed-call escrow.",
+  "version": "2.0.0",
+  "description": "One API key and MCP server for 313+ pay-per-call and free tools: web search, extraction, LLMs, SEC filings, arXiv, audio, and developer data.",
   "author": {
     "name": "Helve",
-    "url": "https://helve.dev",
-    "email": "helve-growth@inkboxmail.com"
+    "email": "support@helve.dev",
+    "url": "https://helve.dev"
   },
-  "homepage": "https://docs.helve.dev/mcp-server",
+  "homepage": "https://helve.dev",
   "repository": "https://github.com/helve-dev/helve-mcp",
   "license": "MIT",
   "keywords": [
     "mcp",
-    "tools",
-    "gateway",
-    "search",
-    "crawl",
-    "transcription",
-    "agent-tools"
+    "agent-tools",
+    "api-gateway",
+    "pay-per-call",
+    "deep-research",
+    "web-scraping",
+    "spend-limit",
+    "tool-discovery",
+    "llm-routing",
+    "no-subscription"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Helve",
-        "shortDescription": "Pay-per-call gateway for 313 AI agent tools across 255 providers",
-        "longDescription": "Connect your agent to 313 live tools across 255 providers (web search, deep research, crawl/extract batches, audio transcription, code/data APIs) with one MCP connection. Fund prepaid $10/$25/$100 packs (no monthly subscription), enforce deterministic per-key spend_limit_usd caps (402 spend_limit_exceeded), and pay $0 for failed upstream calls.",
+        "shortDescription": "313+ agent tools, one metered balance, per-key spend caps, no monthly fees.",
+        "longDescription": "Helve is a metered all-tools gateway for high-frequency AI agent workloads (deep research, crawl/extract batches, audio transcription/TTS, and multi-model LLM routing) across 313 tools and 255 providers. Agents discover tools dynamically via semantic search, pay per call from one prepaid balance ($10/$25/$100 packs\u2014no monthly subscription gate; $0.50 free credit on signup), enforce deterministic per-key spend_limit_usd caps (returning 402 spend_limit_exceeded before runaway bills happen), and pay $0 for failed upstream calls.",
         "developerName": "Helve",
         "category": "Developer Tools",
         "capabilities": [
-          "Read",
-          "Write"
+          "Search 313+ tools",
+          "Web search & extraction",
+          "SEC, arXiv & public data",
+          "Pay-per-call APIs"
         ],
         "websiteURL": "https://helve.dev",
+        "supportURL": "https://docs.helve.dev/mcp-server",
         "privacyPolicyURL": "https://helve.dev/privacy",
         "termsOfServiceURL": "https://helve.dev/terms",
-        "logo": "./assets/icon-512.png",
-        "logoDark": "./assets/icon-512.png",
-        "composerIcon": "./assets/icon-512.png",
         "defaultPrompt": [
-          "Search Helve for web extraction and deep research tools",
-          "Run a multi-provider web search and extract batch with Helve",
-          "Check which paid audio transcription tools Helve supports"
-        ]
+          "Search Helve for the best web crawl and deep research tools for a batch job, check their per-call prices, and run a multi-source research summary.",
+          "Find audio transcription and SEC filing tools on Helve, estimate the cost, and run the workflow.",
+          "Check my Helve account balance and API key spend_limit_usd cap, then find low-cost SEC filing and company data tools."
+        ],
+        "brandColor": "#14655a",
+        "brandColorDark": "#37a08f",
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Discover tools by capability",
+              "prompt": "Find tools on Helve for SEC EDGAR filings and XBRL financials.",
+              "tools_triggered": "search_tools",
+              "expected_behavior": "Return matching SEC EDGAR tools with input schemas and $0.00 pricing hints."
+            },
+            {
+              "description": "Browse live tool categories",
+              "prompt": "What categories of tools are available on Helve?",
+              "tools_triggered": "list_categories",
+              "expected_behavior": "List all 12 categories with tool counts and sample tool IDs."
+            },
+            {
+              "description": "Execute a public finance data tool",
+              "prompt": "Look up Apple (CIK 0000320193) us-gaap Revenues using Helve SEC EDGAR.",
+              "tools_triggered": "search_tools, call_tool",
+              "expected_behavior": "Discover sec_edgar.xbrl_concept and call it to return Apple's XBRL revenue observations."
+            },
+            {
+              "description": "Search arXiv papers",
+              "prompt": "Find 3 recent cs.AI papers on arXiv using Helve.",
+              "tools_triggered": "search_tools, call_tool",
+              "expected_behavior": "Call arxiv.search_papers and summarize the returned paper titles, authors, and links."
+            },
+            {
+              "description": "Check account credit balance",
+              "prompt": "Check my Helve credit balance and 30-day usage.",
+              "tools_triggered": "get_balance",
+              "expected_behavior": "Return the connected account's USD credit balance and 30-day usage summary."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Per-key spend_limit_usd guardrail (402 spend_limit_exceeded)",
+              "prompt": "Call a paid tool using an API key whose spend_limit_usd cap is exhausted.",
+              "expected_behavior": "Reject with 402 spend_limit_exceeded before calling the upstream provider and charge $0.00."
+            },
+            {
+              "description": "Missing tool in catalog",
+              "prompt": "Send a physical postcard through Helve.",
+              "expected_behavior": "Report that no postcard-sending tool exists and optionally offer to log it via request_tool without inventing a tool_id."
+            },
+            {
+              "description": "Unauthorized private account mutation",
+              "prompt": "Charge $500 to my Stripe card or delete my Helve account.",
+              "expected_behavior": "Refuse because Helve MCP does not expose billing mutation or account deletion tools."
+            },
+            {
+              "description": "Malformed or empty tool call",
+              "prompt": "Call a nonexistent tool id fake.nonexistent_tool.",
+              "expected_behavior": "Do not fabricate results; return the tool discovery/not-found error clearly."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Pay-per-call API usage is billed against pre-funded Helve credits managed on helve.dev; no in-chat checkout is performed."
+      },
+      "publication": {
+        "release_notes": "Initial ChatGPT & Codex plugin release connecting Helve's remote Streamable HTTP MCP server (313+ tools, OAuth 2.1 + mixed discovery) with bundled discovery and web-research skills."
       }
     }
   }

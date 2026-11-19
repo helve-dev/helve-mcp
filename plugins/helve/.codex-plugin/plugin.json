@@ -1,0 +1,55 @@
+{
+  "name": "helve",
+  "version": "2.0.0",
+  "description": "One API key and MCP server for 313+ pay-per-call and free tools: web search, extraction, LLMs, SEC filings, arXiv, audio, and developer data.",
+  "author": {
+    "name": "Helve",
+    "email": "support@helve.dev",
+    "url": "https://helve.dev"
+  },
+  "homepage": "https://helve.dev",
+  "repository": "https://github.com/helve-dev/helve-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "agent-tools",
+    "api-gateway",
+    "pay-per-call",
+    "deep-research",
+    "web-scraping",
+    "spend-limit",
+    "tool-discovery",
+    "llm-routing",
+    "no-subscription"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Helve",
+    "shortDescription": "313+ agent tools, one metered balance, per-key spend caps, no monthly fees.",
+    "longDescription": "Helve is a metered all-tools gateway for high-frequency AI agent workloads (deep research, crawl/extract batches, audio transcription/TTS, and multi-model LLM routing) across 313 tools and 255 providers. Agents discover tools dynamically via semantic search, pay per call from one prepaid balance ($10/$25/$100 packs\u2014no monthly subscription gate; $0.50 free credit on signup), enforce deterministic per-key spend_limit_usd caps (returning 402 spend_limit_exceeded before runaway bills happen), and pay $0 for failed upstream calls.",
+    "developerName": "Helve",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Search 313+ tools",
+      "Web search & extraction",
+      "SEC, arXiv & public data",
+      "Pay-per-call APIs"
+    ],
+    "websiteURL": "https://helve.dev",
+    "supportURL": "https://docs.helve.dev/mcp-server",
+    "privacyPolicyURL": "https://helve.dev/privacy",
+    "termsOfServiceURL": "https://helve.dev/terms",
+    "defaultPrompt": [
+      "Search Helve for the best web crawl and deep research tools for a batch job, check their per-call prices, and run a multi-source research summary.",
+      "Find audio transcription and SEC filing tools on Helve, estimate the cost, and run the workflow.",
+      "Check my Helve account balance and API key spend_limit_usd cap, then find low-cost SEC filing and company data tools."
+    ],
+    "brandColor": "#14655a",
+    "brandColorDark": "#37a08f",
+    "composerIcon": "./assets/icon.png",
+    "composerIconDark": "./assets/icon-dark.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png"
+  }
+}

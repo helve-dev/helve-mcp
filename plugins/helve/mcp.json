@@ -1,8 +1,20 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
     "helve": {
-      "type": "http",
-      "url": "https://helve.dev/mcp"
+      "type": "streamable-http",
+      "url": "https://helve.dev/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "mixed",
+            "client": {
+              "mode": "cimd"
+            },
+            "baseScopes": ["tools:read", "tools:call"]
+          }
+        }
+      }
     }
   }
 }
