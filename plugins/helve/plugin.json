@@ -5,8 +5,8 @@
   "description": "Pay-per-call AI tool gateway (313 tools across 255 providers) with prepaid $10/$25/$100 packs, per-key spend_limit_usd caps (402 spend_limit_exceeded), and $0 failed-call escrow.",
   "author": {
     "name": "Helve",
-    "email": "helve-growth@inkboxmail.com",
-    "url": "https://helve.dev"
+    "url": "https://helve.dev",
+    "email": "helve-growth@inkboxmail.com"
   },
   "homepage": "https://docs.helve.dev/mcp-server",
   "repository": "https://github.com/helve-dev/helve-mcp",
@@ -19,5 +19,31 @@
     "crawl",
     "transcription",
     "agent-tools"
-  ]
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Helve",
+        "shortDescription": "Pay-per-call gateway for 313 AI agent tools across 255 providers",
+        "longDescription": "Connect your agent to 313 live tools across 255 providers (web search, deep research, crawl/extract batches, audio transcription, code/data APIs) with one MCP connection. Fund prepaid $10/$25/$100 packs (no monthly subscription), enforce deterministic per-key spend_limit_usd caps (402 spend_limit_exceeded), and pay $0 for failed upstream calls.",
+        "developerName": "Helve",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://helve.dev",
+        "privacyPolicyURL": "https://helve.dev/privacy",
+        "termsOfServiceURL": "https://helve.dev/terms",
+        "logo": "./assets/icon-512.png",
+        "logoDark": "./assets/icon-512.png",
+        "composerIcon": "./assets/icon-512.png",
+        "defaultPrompt": [
+          "Search Helve for web extraction and deep research tools",
+          "Run a multi-provider web search and extract batch with Helve",
+          "Check which paid audio transcription tools Helve supports"
+        ]
+      }
+    }
+  }
 }
