@@ -5,10 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pydantic-ai-helve"
 version = "0.1.0"
-description = "PydanticAI Capability and Toolset for Helve — metered pay-per-call all-tools gateway and tool-search MCP server."
+description = "PydanticAI Capability and MCP helper for Helve — pay-per-call AI tool gateway (313 tools, 255 providers) with spend_limit_usd caps."
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
+authors = [{name = "Helve", email = "daniel.foster@helve.dev"}]
+keywords = ["pydantic-ai", "mcp", "ai-agents", "tools", "helve"]
 dependencies = [
   "pydantic-ai-slim>=1.0.0",
   "httpx>=0.27.0"
@@ -19,3 +21,6 @@ Homepage = "https://helve.dev"
 Documentation = "https://docs.helve.dev"
 "llms.txt" = "https://helve.dev/llms.txt"
 Repository = "https://github.com/helve-dev/helve-mcp"
+
+[tool.setuptools.packages.find]
+include = ["pydantic_ai_helve*"]

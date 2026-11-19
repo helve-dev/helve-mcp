@@ -121,6 +121,9 @@ const [search, extract] = await Promise.all([
 - **Python (`helve-mcp` on PyPI):** [`pip install helve-mcp`](https://pypi.org/project/helve-mcp/) or `HELVE_API_KEY=sk_live_... uvx helve-mcp` (zero-dependency stdio MCP bridge + `HelveClient`)
 - **Node.js (`helve-mcp` on npm):** [`npx -y helve-mcp`](https://www.npmjs.com/package/helve-mcp) (zero-dependency stdio MCP bridge)
 - **Vercel AI SDK (`@helve-dev/ai-sdk` on npm):** [`npm install @helve-dev/ai-sdk`](https://www.npmjs.com/package/@helve-dev/ai-sdk)
+- **LangChain (`langchain-helve` on PyPI):** [`pip install langchain-helve`](https://pypi.org/project/langchain-helve/)
+- **PydanticAI (`pydantic-ai-helve` on PyPI):** [`pip install pydantic-ai-helve`](https://pypi.org/project/pydantic-ai-helve/)
+- **LlamaIndex (`llama-index-tools-helve` on PyPI):** [`pip install llama-index-tools-helve`](https://pypi.org/project/llama-index-tools-helve/)
 - **Catalog & Search (no auth required to browse schemas):** `GET /v1/tools`, `POST /v1/tools/search`
 - **Metered Execution & Demand Capture:** `POST /v1/tools/call`, `POST /v1/tools/{id}/call`, `POST /v1/tools/request`
 - **TypeScript / Node:** `npm install helve-sdk`
