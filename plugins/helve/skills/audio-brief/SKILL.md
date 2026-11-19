@@ -30,5 +30,5 @@ curl -sS -X POST https://helve.dev/v1/transcriptions \
 ## MCP Workflow (`https://helve.dev/mcp`)
 
 1. Call `transcribe(audio_url="https://...")` to get a durable `job_id`.
-2. Poll `transcription_status(id=job_id)` until `status === "completed"`.
+2. Poll `transcription_status(job_id=job_id)` until `status === "completed"`.
 3. Call `call_tool(tool_id="cohere.chat", arguments={...})` to produce action items and key quotes.
