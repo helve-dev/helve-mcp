@@ -71,7 +71,7 @@ gemini mcp add --transport http \
 }
 ```
 
-## Live Tool Catalog (193 Tools Across 161 Providers & 12 Categories)
+## Live Tool Catalog (313 Tools Across 255 Providers & 12 Categories)
 - **Search & Extraction:** `helve.web_search` (11 engines + consensus fusion), `helve.web_extract` (9 extractors), `jina.reader`, `microlink.screenshot_metadata`, `exa.find_similar`, `brave.news_search`, `brave.images_search`, `brave.videos_search`
 - **Research & LLM/Embeddings:** `perplexity.answer`, `exa.answer`, `tavily.research`, `linkup.sourced_answer`, `valyu.answer`, `firecrawl.map`, `tavily.map`, `openrouter.chat`, `openrouter.embeddings`
 - **Audio & Transcription:** `helve.audio_transcribe`, `elevenlabs.tts`, `elevenlabs.sound_effects`, `deepgram.tts`
@@ -87,6 +87,6 @@ gemini mcp add --transport http \
 
 ## Documentation & Trust
 - Docs: https://docs.helve.dev
-- MCP Guide: https://docs.helve.dev/mcp
+- MCP Guide: https://docs.helve.dev/mcp-server
 - Pricing: https://docs.helve.dev/concepts/pricing
 - Terms & Privacy: https://helve.dev/terms | https://helve.dev/privacy

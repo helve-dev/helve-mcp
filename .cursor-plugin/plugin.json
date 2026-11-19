@@ -7,7 +7,7 @@
     "name": "Helve",
     "url": "https://helve.dev"
   },
-  "homepage": "https://docs.helve.dev/mcp",
+  "homepage": "https://docs.helve.dev/mcp-server",
   "repository": "https://github.com/helve-dev/helve-mcp",
   "license": "MIT",
   "logo": "https://helve.dev/icon-512.png",
