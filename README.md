@@ -117,6 +117,10 @@ const [search, extract] = await Promise.all([
 - **Science, Medical, Geo & Utilities:** `pubmed.search`, `pubmed.article_summaries`, `clinicaltrials.search`, `openfda.drug_events`, `arxiv.search_papers`, `openalex.search_works`, `crossref.search_works`, `osrm.route`, `osrm.matrix`, `nominatim.geocode`, `photon.search_places`, `open_elevation.lookup`, `open_meteo.forecast`, `wikipedia.summary`, `wikimedia.pageviews`, `wikidata.search_entities`, `openlibrary.search_books`, `itunes.search`, `openfoodfacts.lookup_product`, `nager_date.public_holidays`, `zippopotam.postal_lookup`, `timeapi.current_time`, `wayback.available`, `cloudflare.dns_lookup`, `rdap.domain_lookup`, `ipwho.geolocation`, `kickbox.disposable_email`, `kroki.render_diagram`, `quickchart.render_chart`, `qrserver.generate_qr`
 
 ## REST API & Official SDKs
+
+- **Python (`helve-mcp` on PyPI):** [`pip install helve-mcp`](https://pypi.org/project/helve-mcp/) or `HELVE_API_KEY=sk_live_... uvx helve-mcp` (zero-dependency stdio MCP bridge + `HelveClient`)
+- **Node.js (`helve-mcp` on npm):** [`npx -y helve-mcp`](https://www.npmjs.com/package/helve-mcp) (zero-dependency stdio MCP bridge)
+- **Vercel AI SDK (`@helve-dev/ai-sdk` on npm):** [`npm install @helve-dev/ai-sdk`](https://www.npmjs.com/package/@helve-dev/ai-sdk)
 - **Catalog & Search (no auth required to browse schemas):** `GET /v1/tools`, `POST /v1/tools/search`
 - **Metered Execution & Demand Capture:** `POST /v1/tools/call`, `POST /v1/tools/{id}/call`, `POST /v1/tools/request`
 - **TypeScript / Node:** `npm install helve-sdk`
