@@ -18,7 +18,7 @@ const helve = createHelveGateway({
 
 const { text } = await generateText({
   model: yourModel,
-  tools: helve.tools,
+  tools: helve,
   prompt: "Search for live web extraction tools on Helve and run one.",
 });
 ```
