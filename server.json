@@ -3,12 +3,8 @@
   "name": "dev.helve/helve",
   "title": "Helve",
   "description": "Pay-per-call AI tool gateway (313 tools, 255 providers) with spend_limit_usd caps & $0 failed calls",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "websiteUrl": "https://helve.dev",
-  "repository": {
-    "url": "https://github.com/helve-dev/helve-mcp",
-    "source": "github"
-  },
   "icons": [
     {
       "src": "https://helve.dev/icon-512.png",
@@ -26,6 +22,10 @@
       "sizes": ["any"]
     }
   ],
+  "repository": {
+    "url": "https://github.com/helve-dev/helve-mcp",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
@@ -34,6 +34,42 @@
         {
           "name": "Authorization",
           "description": "Bearer API key from https://helve.dev (format: Bearer sk_live_...)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "helve-mcp",
+      "version": "2.0.3",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "HELVE_API_KEY",
+          "description": "Helve API key from https://helve.dev (format: sk_live_...)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    },
+    {
+      "registryType": "pypi",
+      "identifier": "helve-mcp",
+      "version": "2.0.4",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "HELVE_API_KEY",
+          "description": "Helve API key from https://helve.dev (format: sk_live_...)",
           "isRequired": true,
           "isSecret": true
         }

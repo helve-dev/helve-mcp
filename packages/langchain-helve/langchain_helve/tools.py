@@ -22,10 +22,12 @@ except ImportError:
                 setattr(self, k, v)
 
 try:
-    from pydantic import BaseModel, Field
+    from pydantic import BaseModel, ConfigDict, Field
 except ImportError:
     class BaseModel:  # type: ignore
         pass
+    def ConfigDict(**kwargs: Any) -> Dict[str, Any]:  # type: ignore
+        return kwargs
     def Field(*args: Any, **kwargs: Any) -> Any:  # type: ignore
         return None
 
@@ -117,9 +119,10 @@ class _RequestToolInput(BaseModel):
 
 
 class HelveSearchTools(BaseTool):
+    model_config = ConfigDict(arbitrary_types_allowed=True)
     name: str = "helve_search_tools"
     description: str = (
-        "Search Helve's metered pay-per-call all-tools gateway for available third-party APIs and free public utilities, "
+        "Search Helve's pay-per-call AI tool gateway for available third-party APIs and free public utilities, "
         "returning tool_id, native input_schema, example, and pricing_hint."
     )
     args_schema: Type[BaseModel] = _SearchToolsInput
@@ -130,10 +133,11 @@ class HelveSearchTools(BaseTool):
 
 
 class HelveCallTool(BaseTool):
+    model_config = ConfigDict(arbitrary_types_allowed=True)
     name: str = "helve_call_tool"
     description: str = (
         "Execute any tool_id discovered via helve_search_tools on Helve's metered gateway. "
-        "Upstream cost + 15% Helve fee; $0.00 on free public tools and failed upstream calls."
+        "Upstream cost + 15% Helve fee; zero charge on free public tools and failed upstream calls."
     )
     args_schema: Type[BaseModel] = _CallToolInput
     client: Any = None
@@ -143,6 +147,7 @@ class HelveCallTool(BaseTool):
 
 
 class HelveRequestTool(BaseTool):
+    model_config = ConfigDict(arbitrary_types_allowed=True)
     name: str = "helve_request_tool"
     description: str = "Log a missing API or capability on Helve when helve_search_tools returns no match."
     args_schema: Type[BaseModel] = _RequestToolInput
@@ -168,12 +173,12 @@ class HelveRequestTool(BaseTool):
 
 
 class HelveToolkit(BaseToolkit):
+    model_config = ConfigDict(arbitrary_types_allowed=True)
     client: HelveGatewayClient
 
     def __init__(self, api_key: Optional[str] = None, base_url: str = "https://helve.dev", client: Optional[HelveGatewayClient] = None) -> None:
         resolved_client = client or HelveGatewayClient(api_key=api_key, base_url=base_url)
         super().__init__(client=resolved_client)
-        self.client = resolved_client
 
     def get_tools(self) -> List[BaseTool]:
         return [

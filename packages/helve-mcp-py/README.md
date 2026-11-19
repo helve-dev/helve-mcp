@@ -63,3 +63,5 @@ print(result)
 - Website: https://helve.dev
 - MCP Guide: https://docs.helve.dev/mcp-server
 - Source & Agent Skills: https://github.com/helve-dev/helve-mcp
+
+<!-- mcp-name: dev.helve/helve -->
