@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "helve",
+  "version": "2.0.2",
+  "description": "Pay-per-call AI tool gateway (313 tools across 255 providers) with prepaid $10/$25/$100 packs, per-key spend_limit_usd caps (402 spend_limit_exceeded), and $0 failed-call escrow.",
+  "author": {
+    "name": "Helve",
+    "email": "helve-growth@inkboxmail.com",
+    "url": "https://helve.dev"
+  },
+  "homepage": "https://docs.helve.dev/mcp-server",
+  "repository": "https://github.com/helve-dev/helve-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "tools",
+    "gateway",
+    "search",
+    "crawl",
+    "transcription",
+    "agent-tools"
+  ]
+}
