@@ -2,9 +2,9 @@
 
 Zero-dependency stdio-to-Streamable-HTTP MCP bridge and lightweight Python client for **[Helve](https://helve.dev)** — one pay-per-call API & MCP gateway for **313 live tools across 255 providers** (web search, crawl/extract, deep research, audio transcription, LLMs, SEC filings, GitHub, PDFs, finance, and utilities).
 
-- **No monthly subscriptions:** $0/mo base with non-expiring $10 / $25 / $100 credit packs ($0.50 free signup credit).
+- **No monthly subscriptions:** Zero base fee with non-expiring prepaid credit packs (USD 10 / 25 / 100; USD 0.50 free signup credit).
 - **Deterministic budget caps:** Per-key `spend_limit_usd` hard ceiling (`402 spend_limit_exceeded`).
-- **$0 failed-call escrow:** Failed upstream calls automatically debit $0.
+- **Zero-cost failed-call escrow:** Failed upstream calls automatically debit USD 0.
 - **MCP + REST / Code Mode ready:** Works over Streamable HTTP MCP, stdio MCP via `uvx helve-mcp`, or direct Python/REST calls.
 
 ## Quickstart (MCP stdio bridge)

@@ -3,7 +3,7 @@
 from .client import HelveClient
 from .cli import DEFAULT_ENDPOINT, extract_json_from_sse, forward_jsonrpc, parse_args
 
-__version__ = "2.0.2"
+__version__ = "2.0.3"
 __all__ = [
     "DEFAULT_ENDPOINT",
     "HelveClient",
