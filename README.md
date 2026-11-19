@@ -76,7 +76,10 @@ gemini mcp add --transport http \
 ### Install Skills & Plugins
 ```bash
 # Install individual Helve skills (Claude Code, Codex, Cursor, etc.)
-npx skills add helve-dev/helve-mcp --skill get-started
+npx skills add helve-dev/helve-mcp --skill deep-research   # ~$0.02/brief multi-engine search + extract + synthesis
+npx skills add helve-dev/helve-mcp --skill batch-crawl     # ~$0.05/10 URLs clean markdown + $0 blocked-page billing
+npx skills add helve-dev/helve-mcp --skill audio-brief     # ~$0.08/15 min Deepgram/AssemblyAI transcription + brief
+npx skills add helve-dev/helve-mcp --skill get-started     # Core setup, spend_limit_usd caps & tool discovery
 
 # Or add the full plugin marketplace
 codex plugin marketplace add helve-dev/helve-mcp
