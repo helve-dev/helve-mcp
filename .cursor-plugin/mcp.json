@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "helve": {
+      "url": "https://helve.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${HELVE_API_KEY}"
+      }
+    }
+  }
+}

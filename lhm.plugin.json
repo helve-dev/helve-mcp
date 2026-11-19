@@ -1,0 +1,9 @@
+{
+  "identifier": "helve-mcp",
+  "name": "Helve — All-Tools Gateway",
+  "description": "Metered pay-per-call MCP gateway giving AI agents access to 300+ tools (search, extraction, transcription, LLM inference, SEC EDGAR, GitHub, arXiv, FX, and more) with one API key.",
+  "version": "2.0.1",
+  "homepage": "https://helve.dev",
+  "cloudEndpoint": "https://helve.dev/mcp",
+  "tags": ["gateway", "tool-search", "search", "extraction", "transcription", "agents"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "helve",
+  "displayName": "Helve — All-Tools Gateway",
+  "version": "2.0.1",
+  "description": "Metered pay-per-call gateway for 300+ AI agent tools: search, discover, and call with one key.",
+  "author": {
+    "name": "Helve",
+    "url": "https://helve.dev"
+  },
+  "homepage": "https://docs.helve.dev/mcp",
+  "repository": "https://github.com/helve-dev/helve-mcp",
+  "license": "MIT",
+  "logo": "https://helve.dev/icon-512.png",
+  "keywords": ["mcp", "gateway", "tool-search", "pay-per-call", "api", "agents"]
+}

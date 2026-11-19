@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-index-tools-helve"
+version = "0.1.0"
+description = "LlamaIndex ToolSpec for Helve — metered pay-per-call all-tools gateway and tool-search API."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+  "llama-index-core>=0.12.0",
+  "httpx>=0.27.0"
+]
+
+[project.urls]
+Homepage = "https://helve.dev"
+Documentation = "https://docs.helve.dev"
+"llms.txt" = "https://helve.dev/llms.txt"
+Repository = "https://github.com/helve-dev/helve-mcp"
