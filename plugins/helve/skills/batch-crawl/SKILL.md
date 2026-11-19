@@ -25,7 +25,7 @@ curl -sS -X POST https://helve.dev/v1/tools/call \
     "tool_id": "helve.web_extract",
     "arguments": {
       "urls": ["https://helve.dev/pricing", "https://docs.helve.dev/quickstart"],
-      "max_chars": 8000
+      "content": { "max_chars": 8000 }
     }
   }'
 ```

@@ -103,7 +103,7 @@ const [search, extract] = await Promise.all([
   fetch("https://helve.dev/v1/tools/call", {
     method: "POST",
     headers,
-    body: JSON.stringify({ tool_id: "helve.web_extract", arguments: { url: "https://docs.helve.dev" } }),
+    body: JSON.stringify({ tool_id: "helve.web_extract", arguments: { urls: ["https://docs.helve.dev"] } }),
   }).then((r) => r.json()),
 ]);
 ```

@@ -24,7 +24,7 @@ curl -sS -X POST https://helve.dev/v1/transcriptions \
   -H "Content-Type: application/json" \
   -d '{"audio_url": "https://example.com/earnings-call.mp3"}'
 
-# 2. Poll GET /v1/transcriptions/{job_id}, then summarize via cohere.chat or openrouter.chat
+# 2. Poll GET /v1/jobs/{id}, then summarize via cohere.chat or openrouter.chat
 ```
 
 ## MCP Workflow (`https://helve.dev/mcp`)
