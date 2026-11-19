@@ -1,0 +1,30 @@
+{
+  "name": "helve-mcp",
+  "version": "2.0.2",
+  "description": "Stdio-to-HTTP MCP bridge and CLI for Helve (https://helve.dev/mcp) — 313 AI agent tools across 255 providers with spend_limit_usd caps and $0 failed-call escrow.",
+  "type": "module",
+  "bin": {
+    "helve-mcp": "bin/helve-mcp.mjs"
+  },
+  "main": "./bin/helve-mcp.mjs",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "helve",
+    "ai-agents",
+    "tool-search",
+    "api-gateway"
+  ],
+  "homepage": "https://docs.helve.dev/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helve-dev/helve-mcp.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

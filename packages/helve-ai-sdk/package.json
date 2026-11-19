@@ -1,5 +1,5 @@
 {
-  "name": "@helve/ai-sdk",
+  "name": "@helve-dev/ai-sdk",
   "version": "0.1.0",
   "description": "Vercel AI SDK tools for Helve — the metered pay-per-call all-tools gateway and tool-search API for AI agents.",
   "type": "module",
@@ -21,11 +21,12 @@
     "agent-tools",
     "gateway"
   ],
-  "homepage": "https://helve.dev",
+  "homepage": "https://docs.helve.dev/sdks",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/helve-dev/helve-mcp"
+    "url": "git+https://github.com/helve-dev/helve-mcp.git",
+    "directory": "packages/helve-ai-sdk"
   },
   "peerDependencies": {
     "ai": ">=4.0.0",
