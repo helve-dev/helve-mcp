@@ -11,7 +11,7 @@
 [![Docs](https://img.shields.io/badge/docs-helve.dev-black)](https://docs.helve.dev)
 [![llms.txt](https://img.shields.io/badge/llms.txt-helve.dev-purple)](https://helve.dev/llms.txt)
 
-**Run high-frequency paid multi-provider AI agent workflows (deep research, multi-engine search/crawl/extract, audio transcription, LLMs & TTS) with one key, deterministic `spend_limit_usd` caps, and $0 failed-call escrow.**
+**$0/mo subscription & non-expiring $10 / $25 / $100 prepaid packs — 313 tools across 255 providers (LLMs, audio, email, PDF, browser, finance + web) over both MCP and REST/OpenAPI 3.1, with per-key `spend_limit_usd` caps on every tier and $0 failed-call escrow.**
 
 Helve is a metered, pay-per-call **all-tools gateway and tool-search MCP server** at `https://helve.dev/mcp` (313 live tools today across 255 providers and 12 categories — 291 free public/finance/dev data tools + 22 metered paid tools spanning search, extraction, transcription, research Q&A, TTS/audio, crawl/mapping, code execution, security/DNS, finance, developer data, and knowledge/geo):
 - **`search_tools`**: Search Helve's catalog by capability or intent (or omit `query` to browse live tools), inspect native JSON schemas, and see upfront `pricing_hint`s.
