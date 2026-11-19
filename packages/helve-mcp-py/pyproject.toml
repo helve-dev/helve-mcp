@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "helve-mcp"
+version = "2.0.2"
+description = "Zero-dependency stdio-to-Streamable-HTTP MCP bridge and Python client for Helve (313 tools, 255 providers, spend_limit_usd caps, $0 failed-call escrow)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+  { name = "Helve", email = "daniel.foster@helve.dev" }
+]
+keywords = ["mcp", "model-context-protocol", "ai-agents", "tools", "gateway", "helve", "stdio"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://helve.dev"
+Documentation = "https://docs.helve.dev/mcp-server"
+Repository = "https://github.com/helve-dev/helve-mcp"
+Issues = "https://github.com/helve-dev/helve-mcp/issues"
+
+[project.scripts]
+helve-mcp = "helve_mcp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
