@@ -2,24 +2,30 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "dev.helve/helve",
   "title": "Helve",
-  "description": "0% markup AI tool gateway (324 tools, 257 providers) with spend_limit_usd caps & $0 failed calls",
+  "description": "0% markup AI tool gateway (330+ tools, 260+ providers) with spend_limit_usd caps & $0 failed calls",
   "version": "2.0.4",
   "websiteUrl": "https://helve.dev",
   "icons": [
     {
       "src": "https://helve.dev/icon-512.png",
       "mimeType": "image/png",
-      "sizes": ["512x512"]
+      "sizes": [
+        "512x512"
+      ]
     },
     {
       "src": "https://helve.dev/favicon-48.png",
       "mimeType": "image/png",
-      "sizes": ["48x48"]
+      "sizes": [
+        "48x48"
+      ]
     },
     {
       "src": "https://helve.dev/favicon.svg",
       "mimeType": "image/svg+xml",
-      "sizes": ["any"]
+      "sizes": [
+        "any"
+      ]
     }
   ],
   "repository": {
