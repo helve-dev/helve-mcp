@@ -78,14 +78,18 @@ In LangSmith, open **Tools > MCP servers > Add MCP server**:
 
 Add Helve to a LangSmith Tool Kit to expose search, extraction, transcription, SEC filings, and other upstream APIs under LangSmith policies and traces without storing separate API keys for each provider.
 
-Or register via the LangSmith Tool Gateway API:
+Or register via the LangSmith Tool Gateway API (`POST /v1/managed-tools/servers`):
 ```json
 {
-  "name": "Helve",
+  "name": "helve",
   "upstream_url": "https://helve.dev/mcp",
+  "scope": "workspace",
   "connection": { "type": "oauth" }
 }
 ```
+
+- **Step-by-step guide:** [docs.helve.dev/langsmith-tool-gateway](https://docs.helve.dev/langsmith-tool-gateway)
+- **Runnable starter CLI + LangGraph example:** [helve-dev/langsmith-tool-gateway-starter](https://github.com/helve-dev/langsmith-tool-gateway-starter)
 
 ## Agent Skills, Marketplaces & Code Mode
 
@@ -148,9 +152,12 @@ const [search, extract] = await Promise.all([
 ## Documentation & Trust
 - Docs: https://docs.helve.dev
 - MCP Guide: https://docs.helve.dev/mcp-server
+- LangSmith Tool Gateway Guide: https://docs.helve.dev/langsmith-tool-gateway
 - Pricing: https://docs.helve.dev/concepts/pricing
 - Terms & Privacy: https://helve.dev/terms | https://helve.dev/privacy
 
-## Runnable Open-Source Starter CLI
+## Runnable Open-Source Starters
+
+- **[`helve-dev/langsmith-tool-gateway-starter`](https://github.com/helve-dev/langsmith-tool-gateway-starter)** — Zero-dependency Node 18+ CLI and LangGraph Python example that registers `https://helve.dev/mcp` in LangSmith Tool Gateway, provisions curated Tool Kits (`research`, `minimal`, `audio`, `full`), and includes zero-key `--dry-run`, `verify`, and `discover` modes.
 
 - **[`helve-dev/company-dossier`](https://github.com/helve-dev/company-dossier)** — Zero-dependency Node 18+ CLI that generates a cited Markdown or JSON company & SEC research dossier from 8+ live sources (`helve.web_search`, `helve.web_extract`, `exa.answer`, `exa.find_similar`, `brave.news_search`, `sec_edgar.*`, `github.search_repositories`, `hackernews.search`, plus optional `openrouter.chat`) through a single `HELVE_API_KEY` with per-call USD cost tracking and `--demo` / `--discover` modes.
