@@ -1,6 +1,6 @@
 # @helve-dev/ai-sdk
 
-**MCP + Code Mode ready** — Vercel AI SDK tool definitions and gateway client for **Helve** (`https://helve.dev`). Give your agents one `HELVE_API_KEY` for 313+ APIs across 255 providers over both **MCP (`https://helve.dev/mcp`)** and **scriptable REST/`fetch`**, with deterministic `spend_limit_usd` caps and `$0` failed-call escrow.
+**MCP + Code Mode ready** — Vercel AI SDK tool definitions and gateway client for **Helve** (`https://helve.dev`). Give your agents one `HELVE_API_KEY` for 324+ APIs across 257 providers (0% per-call markup, $1.00 free starter credit) over both **MCP (`https://helve.dev/mcp`)** and **scriptable REST/`fetch`**, with deterministic `spend_limit_usd` caps and `$0` failed-call escrow.
 
 ## Quickstart
 

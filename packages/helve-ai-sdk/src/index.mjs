@@ -109,7 +109,7 @@ export function createHelveGateway({ apiKey, baseUrl, fetchImpl, toolFn, z } = {
       }),
       helve_call_tool: toolFn({
         description:
-          "Call any tool_id discovered via helve_search_tools on Helve's metered gateway. Upstream cost + 15% Helve fee ($0.00 on free public tools and failed calls).",
+          "Call any tool_id discovered via helve_search_tools on Helve's metered gateway. 0% per-call markup — exact upstream provider rates ($0.00 on 302 free public tools and failed calls).",
         inputSchema: z.object({
           tool_id: z.string().describe("Exact tool_id returned by helve_search_tools"),
           arguments: z.record(z.unknown()).describe("Native JSON arguments matching the tool's input_schema"),

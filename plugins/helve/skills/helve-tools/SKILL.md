@@ -1,6 +1,6 @@
 ---
 name: helve-tools
-description: Discover and call 313+ external tools across 255 providers (web search, crawl/extract, audio transcription, code execution, data APIs) through Helve's single pay-per-call MCP gateway with deterministic spend_limit_usd caps and $0 failed-call escrow.
+description: Discover and call 324+ external tools across 257 providers (web search, crawl/extract, audio transcription, code execution, data APIs) through Helve's single pay-per-call MCP gateway with deterministic spend_limit_usd caps and $0 failed-call escrow.
 ---
 
 # Helve All-Tools Gateway

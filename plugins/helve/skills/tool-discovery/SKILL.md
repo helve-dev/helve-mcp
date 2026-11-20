@@ -1,6 +1,6 @@
 ---
 name: tool-discovery
-description: Discover, inspect schemas, and execute any of Helve's 313+ third-party tools across finance, developer data, knowledge, LLMs, and utilities.
+description: Discover, inspect schemas, and execute any of Helve's 324+ third-party tools across finance, developer data, knowledge, LLMs, and utilities.
 ---
 
 Always discover the exact `tool_id` and `input_schema` before calling `call_tool`:

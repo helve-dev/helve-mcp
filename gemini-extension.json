@@ -13,7 +13,7 @@
   "settings": [
     {
       "name": "Helve API Key",
-      "description": "Your Helve API key (sk_live_...) from https://helve.dev ($0.50 free credit on signup).",
+      "description": "Your Helve API key (sk_live_...) from https://helve.dev ($1.00 free starter credit on signup).",
       "envVar": "HELVE_API_KEY",
       "sensitive": true
     }

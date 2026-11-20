@@ -137,7 +137,7 @@ class HelveCallTool(BaseTool):
     name: str = "helve_call_tool"
     description: str = (
         "Execute any tool_id discovered via helve_search_tools on Helve's metered gateway. "
-        "Upstream cost + 15% Helve fee; zero charge on free public tools and failed upstream calls."
+        "0% per-call markup (exact upstream provider rates); zero charge on free public tools and failed upstream calls."
     )
     args_schema: Type[BaseModel] = _CallToolInput
     client: Any = None

@@ -13,11 +13,11 @@
 
 **Run high-frequency paid multi-provider AI agent workflows (deep research, multi-engine search/crawl/extract, audio transcription, LLMs & TTS) with one key, deterministic `spend_limit_usd` caps, and $0 failed-call escrow.**
 
-Helve is a metered, pay-per-call **all-tools gateway and tool-search MCP server** at `https://helve.dev/mcp` (313 live tools today across 255 providers and 12 categories — 291 free public/finance/dev data tools + 22 metered paid tools spanning search, extraction, transcription, research Q&A, TTS/audio, crawl/mapping, code execution, security/DNS, finance, developer data, and knowledge/geo):
+Helve is a metered, pay-per-call **all-tools gateway and tool-search MCP server** at `https://helve.dev/mcp` (324 live tools today across 257 providers and 12 categories — 302 free public/finance/dev data tools + 22 metered paid tools spanning search, extraction, transcription, research Q&A, TTS/audio, crawl/mapping, code execution, security/DNS, finance, developer data, and knowledge/geo):
 - **`search_tools`**: Search Helve's catalog by capability or intent (or omit `query` to browse live tools), inspect native JSON schemas, and see upfront `pricing_hint`s.
 - **`list_categories`**: Browse Helve's live tool catalog by category with tool counts and sample `tool_id`s.
 - **`get_balance`**: Check your USD credit balance, 30-day usage summary, and active API key `spend_limit_usd` budget cap.
-- **`call_tool`**: Execute any discovered `tool_id` with `arguments` under one prepaid USD balance ($0.50 free signup credit, no credit card required; upstream cost + 15% Helve fee; $0.00 on zero-auth public utilities).
+- **`call_tool`**: Execute any discovered `tool_id` with `arguments` under one prepaid USD balance ($1.00 free starter credit, no credit card required; 0% per-call markup — exact upstream provider rates; $0.00 on 302 public/zero-auth tools and failed calls).
 - **`request_tool`**: Report a missing API or capability (`tool_name`, `use_case`) when your agent hits a blocker so Helve can prioritize onboarding it.
 - **Direct & Async Convenience Tools (11 MCP tools total)**: `search`, `extract`, `transcribe`, `transcription_status`, `list_transcriptions`, and `cancel_transcription`.
 - **Zero-Debit Failed-Call Protection**: Failed upstream calls debit **$0.00** (transcription debits only on completion).
@@ -71,7 +71,7 @@ gemini mcp add --transport http \
 }
 ```
 
-## Live Tool Catalog (313 Tools Across 255 Providers & 12 Categories)
+## Live Tool Catalog (324 Tools Across 257 Providers & 12 Categories)
 - **Search & Extraction:** `helve.web_search` (11 engines + consensus fusion), `helve.web_extract` (9 extractors), `jina.reader`, `microlink.screenshot_metadata`, `exa.find_similar`, `brave.news_search`, `brave.images_search`, `brave.videos_search`
 - **Research & LLM/Embeddings:** `perplexity.answer`, `exa.answer`, `tavily.research`, `linkup.sourced_answer`, `valyu.answer`, `firecrawl.map`, `tavily.map`, `openrouter.chat`, `openrouter.embeddings`
 - **Audio & Transcription:** `helve.audio_transcribe`, `elevenlabs.tts`, `elevenlabs.sound_effects`, `deepgram.tts`

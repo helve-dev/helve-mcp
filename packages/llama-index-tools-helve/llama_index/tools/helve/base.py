@@ -50,7 +50,7 @@ class HelveToolSpec(BaseToolSpec):
         return self._request("POST", "/v1/tools/search", body, require_auth=False)
 
     def call_tool(self, tool_id: str, arguments: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-        """Execute a discovered Helve tool_id per-call (upstream cost + 15% Helve fee; $0.00 on failed calls)."""
+        """Execute a discovered Helve tool_id per-call (0% per-call markup — exact upstream provider rates; $0.00 on failed calls)."""
         body: Dict[str, Any] = {"tool_id": tool_id, "arguments": arguments or {}}
         return self._request("POST", "/v1/tools/call", body, require_auth=True)
 

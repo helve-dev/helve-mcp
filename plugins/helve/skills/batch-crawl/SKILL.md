@@ -13,7 +13,7 @@ Extract clean, LLM-ready markdown from up to 10 URLs in one call with automatic 
 | --- | --- | --- |
 | 1. Batch extract (10 URLs) | `helve.web_extract` (`provider: "auto"`) | `~$0.050` |
 | 2. JS-rendered fallback (optional) | `browserless.content` | `~$0.005 / page` |
-| **Total per 10-URL batch** | **1 key · `$0.50` free = ~100 pages** | **`~$0.050`** |
+| **Total per 10-URL batch** | **1 key · `$1.00` free = ~200 pages** | **`~$0.050`** |
 
 ## Quickstart (`curl`)
 

@@ -13,7 +13,7 @@ Transcribe podcasts, earnings calls, or meetings via Deepgram Nova / AssemblyAI 
 | --- | --- | --- |
 | 1. Audio transcription (15 min) | `transcribe` (`POST /v1/transcriptions`) | `~$0.075` |
 | 2. Structured summary brief | `openrouter.chat` (`openai/gpt-4o-mini`) | `~$0.005` |
-| **Total per 15-min brief** | **1 key · `$0.50` free = ~6 briefs** | **`~$0.080`** |
+| **Total per 15-min brief** | **1 key · `$1.00` free = ~12 briefs** | **`~$0.080`** |
 
 ## Quickstart (`curl`)
 

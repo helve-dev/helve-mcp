@@ -1,6 +1,6 @@
 # llama-index-tools-helve
 
-LlamaIndex `BaseToolSpec` integration for [Helve](https://helve.dev) — a pay-per-call AI tool gateway exposing 313 live tools across 255 providers (web search, batch extraction, audio transcription, PDFs, LLMs, finance, email, and more) behind one API key.
+LlamaIndex `BaseToolSpec` integration for [Helve](https://helve.dev) — a pay-per-call AI tool gateway exposing 324 live tools across 257 providers (0% per-call markup, USD 1.00 free starter credit) (web search, batch extraction, audio transcription, PDFs, LLMs, finance, email, and more) behind one API key.
 
 - **No monthly subscriptions:** Prepaid USD 10, USD 25, or USD 100 credit packs that never expire.
 - **Deterministic spend caps:** Set per-key `spend_limit_usd` limits (`402 spend_limit_exceeded` before overspend).

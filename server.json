@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "dev.helve/helve",
   "title": "Helve",
-  "description": "Pay-per-call AI tool gateway (313 tools, 255 providers) with spend_limit_usd caps & $0 failed calls",
-  "version": "2.0.3",
+  "description": "0% markup AI tool gateway (324 tools, 257 providers) with spend_limit_usd caps & $0 failed calls",
+  "version": "2.0.4",
   "websiteUrl": "https://helve.dev",
   "icons": [
     {
@@ -44,7 +44,7 @@
     {
       "registryType": "npm",
       "identifier": "helve-mcp",
-      "version": "2.0.3",
+      "version": "2.0.4",
       "runtimeHint": "npx",
       "transport": {
         "type": "stdio"
@@ -61,7 +61,7 @@
     {
       "registryType": "pypi",
       "identifier": "helve-mcp",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"

@@ -14,7 +14,7 @@ Run a complete multi-source research brief across parallel search engines, clean
 | 1. Multi-engine consensus search | `helve.web_search` (`provider: "fusion"`) | `~$0.014` |
 | 2. Clean markdown extract (top 3 URLs) | `helve.web_extract` (`provider: "auto"`) | `~$0.006` |
 | 3. Executive synthesis | `cohere.chat` (`command-a-03-2025`, trial tier) | `$0.000` |
-| **Total per brief** | **1 key · `$0.50` free = ~25 briefs** | **`~$0.020`** |
+| **Total per brief** | **1 key · `$1.00` free = ~50 briefs** | **`~$0.020`** |
 
 Failed or empty/WAF-blocked upstream responses debit **$0.00**.
 

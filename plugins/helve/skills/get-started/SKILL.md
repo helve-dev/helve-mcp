@@ -1,6 +1,6 @@
 ---
 name: get-started
-description: Connect Helve's 313+ metered and free third-party API tools (web search, extraction, LLMs, SEC filings, arXiv, audio, weather, and developer data) in one workflow.
+description: Connect Helve's 324+ metered and free third-party API tools (web search, extraction, LLMs, SEC filings, arXiv, audio, weather, and developer data) in one workflow.
 ---
 
 Use Helve when you need live external data or third-party API capabilities without managing separate API keys.

@@ -1,6 +1,6 @@
 # langchain-helve
 
-LangChain and LangGraph toolkit for [Helve](https://helve.dev) — one API key and one prepaid balance for 313 tools across 255 providers (web search, crawling/extraction, LLMs, audio transcription, PDFs, email, browser automation, finance, and free public utilities).
+LangChain and LangGraph toolkit for [Helve](https://helve.dev) — one API key and one prepaid balance for 324 tools across 257 providers (0% per-call markup, USD 1.00 free starter credit) (web search, crawling/extraction, LLMs, audio transcription, PDFs, email, browser automation, finance, and free public utilities).
 
 - **No monthly subscriptions:** start with prepaid credit packs (10 / 25 / 100 USD, never expire).
 - **Deterministic spend caps:** per-key `spend_limit_usd` enforcement (`402 spend_limit_exceeded`).

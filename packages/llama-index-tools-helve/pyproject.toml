@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "llama-index-tools-helve"
-version = "0.1.0"
-description = "LlamaIndex ToolSpec for Helve — pay-per-call AI tool gateway (313 tools, 255 providers) with spend_limit_usd caps."
+version = "0.1.1"
+description = "LlamaIndex ToolSpec for Helve — pay-per-call AI tool gateway (324 tools, 257 providers, 0% markup) with spend_limit_usd caps."
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}

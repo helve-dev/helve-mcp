@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "helve",
   "version": "2.0.0",
-  "description": "One API key and MCP server for 313+ pay-per-call and free tools: web search, extraction, LLMs, SEC filings, arXiv, audio, and developer data.",
+  "description": "One API key and MCP server for 324+ pay-per-call and free tools: web search, extraction, LLMs, SEC filings, arXiv, audio, and developer data.",
   "author": {
     "name": "Helve",
     "email": "support@helve.dev",
@@ -27,12 +27,12 @@
     "com.openai": {
       "interface": {
         "displayName": "Helve",
-        "shortDescription": "313+ agent tools, one metered balance, per-key spend caps, no monthly fees.",
-        "longDescription": "Helve is a metered all-tools gateway for high-frequency AI agent workloads (deep research, crawl/extract batches, audio transcription/TTS, and multi-model LLM routing) across 313 tools and 255 providers. Agents discover tools dynamically via semantic search, pay per call from one prepaid balance ($10/$25/$100 packs\u2014no monthly subscription gate; $0.50 free credit on signup), enforce deterministic per-key spend_limit_usd caps (returning 402 spend_limit_exceeded before runaway bills happen), and pay $0 for failed upstream calls.",
+        "shortDescription": "324+ agent tools, 0% per-call markup, per-key spend caps, no monthly fees.",
+        "longDescription": "Helve is a metered all-tools gateway for high-frequency AI agent workloads (deep research, crawl/extract batches, audio transcription/TTS, and multi-model LLM routing) across 324 tools and 257 providers. Agents discover tools dynamically via semantic search, pay exact provider rates (0% per-call markup) from one prepaid balance ($5/$10/$25/$100 packs\u2014no monthly subscription gate; $1.00 free starter credit on signup), enforce deterministic per-key spend_limit_usd caps (returning 402 spend_limit_exceeded before runaway bills happen), and pay $0 for failed upstream calls.",
         "developerName": "Helve",
         "category": "Developer Tools",
         "capabilities": [
-          "Search 313+ tools",
+          "Search 324+ tools",
           "Web search & extraction",
           "SEC, arXiv & public data",
           "Pay-per-call APIs"
@@ -115,7 +115,7 @@
         "commerce_description": "Pay-per-call API usage is billed against pre-funded Helve credits managed on helve.dev; no in-chat checkout is performed."
       },
       "publication": {
-        "release_notes": "Initial ChatGPT & Codex plugin release connecting Helve's remote Streamable HTTP MCP server (313+ tools, OAuth 2.1 + mixed discovery) with bundled discovery and web-research skills."
+        "release_notes": "Initial ChatGPT & Codex plugin release connecting Helve's remote Streamable HTTP MCP server (324+ tools, OAuth 2.1 + mixed discovery) with bundled discovery and web-research skills."
       }
     }
   }
