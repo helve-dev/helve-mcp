@@ -71,6 +71,22 @@ gemini mcp add --transport http \
 }
 ```
 
+### LangSmith Tool Gateway
+In LangSmith, open **Tools > MCP servers > Add MCP server**:
+- **Server URL:** `https://helve.dev/mcp` (Streamable HTTP)
+- **Credentials:** Select **OAuth > Automatic OAuth** (Helve exposes standard OAuth 2.1 metadata and dynamic client registration), or **API key** with header `Authorization` set to `Bearer sk_live_...`.
+
+Add Helve to a LangSmith Tool Kit to expose search, extraction, transcription, SEC filings, and other upstream APIs under LangSmith policies and traces without storing separate API keys for each provider.
+
+Or register via the LangSmith Tool Gateway API:
+```json
+{
+  "name": "Helve",
+  "upstream_url": "https://helve.dev/mcp",
+  "connection": { "type": "oauth" }
+}
+```
+
 ## Agent Skills, Marketplaces & Code Mode
 
 ### Install Skills & Plugins
