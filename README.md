@@ -134,3 +134,7 @@ const [search, extract] = await Promise.all([
 - MCP Guide: https://docs.helve.dev/mcp-server
 - Pricing: https://docs.helve.dev/concepts/pricing
 - Terms & Privacy: https://helve.dev/terms | https://helve.dev/privacy
+
+## Runnable Open-Source Starter CLI
+
+- **[`helve-dev/company-dossier`](https://github.com/helve-dev/company-dossier)** — Zero-dependency Node 18+ CLI that generates a cited Markdown or JSON company & SEC research dossier from 8+ live sources (`helve.web_search`, `helve.web_extract`, `exa.answer`, `exa.find_similar`, `brave.news_search`, `sec_edgar.*`, `github.search_repositories`, `hackernews.search`, plus optional `openrouter.chat`) through a single `HELVE_API_KEY` with per-call USD cost tracking and `--demo` / `--discover` modes.
