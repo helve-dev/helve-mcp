@@ -93,12 +93,13 @@ Or register via the LangSmith Tool Gateway API (`POST /v1/managed-tools/servers`
 
 ## Hermes Agent Plugin
 
-Install the zero-dependency native Python plugin for [Nous Research Hermes Agent](https://github.com/NousResearch/hermes-agent) (`helve_search_tools`, `helve_list_categories`, `helve_call_tool`, `helve_request_tool`, plus bundled `helve:helve` skill and optional MCP OAuth):
+Helve is listed in the official [NousResearch Hermes Marketplace](https://hermes-agent.nousresearch.com/marketplace/helve). Install the zero-dependency native Python plugin (`helve_search_tools`, `helve_list_categories`, `helve_call_tool`, `helve_request_tool`, plus bundled `helve:helve` skill and optional MCP OAuth) in one command:
 
 ```bash
-hermes plugins install https://github.com/helve-dev/hermes-plugin --enable
+hermes plugins install helve
 ```
 
+- **Official Marketplace:** [hermes-agent.nousresearch.com/marketplace/helve](https://hermes-agent.nousresearch.com/marketplace/helve)
 - **Repository:** [`helve-dev/hermes-plugin`](https://github.com/helve-dev/hermes-plugin) (`$1` free credit ≈ 1,000 Serper searches or 1,000 Exa scrapes at `0%` markup, `spend_limit_usd` caps, `$0` failed-call escrow)
 
 ## Agent Skills, Marketplaces & Code Mode
