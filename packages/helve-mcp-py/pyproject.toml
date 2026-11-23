@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "helve-mcp"
-version = "2.0.5"
-description = "Zero-dependency stdio-to-Streamable-HTTP MCP bridge and Python client for Helve (324 tools, 257 providers, 0% markup, spend_limit_usd caps, $0 failed-call escrow)."
+version = "2.0.6"
+description = "Zero-dependency stdio-to-Streamable-HTTP MCP bridge and Python client for Helve (330+ APIs across 260+ providers, 0% markup, spend_limit_usd caps, $0 failed-call escrow)."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"

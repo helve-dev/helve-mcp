@@ -1,7 +1,7 @@
 {
   "name": "helve-mcp",
-  "version": "2.0.4",
-  "description": "Stdio-to-HTTP MCP bridge and CLI for Helve (https://helve.dev/mcp) — 324 AI agent tools across 257 providers (0% markup) with spend_limit_usd caps and $0 failed-call escrow.",
+  "version": "2.0.5",
+  "description": "Stdio-to-HTTP MCP bridge and CLI for Helve (https://helve.dev/mcp) — 330+ AI agent APIs across 260+ providers (0% markup) with spend_limit_usd caps and $0 failed-call escrow.",
   "type": "module",
   "bin": {
     "helve-mcp": "bin/helve-mcp.mjs"

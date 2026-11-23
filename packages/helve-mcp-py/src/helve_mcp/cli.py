@@ -10,7 +10,9 @@ import urllib.request
 from typing import Any, Dict, List, Optional, Tuple
 
 DEFAULT_ENDPOINT = os.environ.get("HELVE_MCP_URL", "https://helve.dev/mcp")
-VERSION = "2.0.2"
+VERSION = "2.0.6"
+MISSING_KEY_URL = "https://helve.dev/k/pypi"
+MISSING_KEY_NOTICE = f"No HELVE_API_KEY — get one with $1 free credit at {MISSING_KEY_URL}"
 
 
 def parse_args(argv: List[str]) -> Dict[str, Any]:
@@ -55,6 +57,37 @@ def extract_json_from_sse(text: str) -> List[Dict[str, Any]]:
     return messages
 
 
+def missing_key_auth_response(message: Dict[str, Any]) -> List[Dict[str, Any]]:
+    if not isinstance(message, dict) or "id" not in message:
+        return []
+    if message.get("method") == "tools/call":
+        return [
+            {
+                "jsonrpc": "2.0",
+                "id": message["id"],
+                "result": {
+                    "isError": True,
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": f"{MISSING_KEY_NOTICE} (set HELVE_API_KEY in your MCP client config).",
+                        }
+                    ],
+                },
+            }
+        ]
+    return [
+        {
+            "jsonrpc": "2.0",
+            "id": message["id"],
+            "error": {
+                "code": -32001,
+                "message": MISSING_KEY_NOTICE,
+            },
+        }
+    ]
+
+
 def forward_jsonrpc(
     message: Dict[str, Any],
     *,
@@ -85,6 +118,8 @@ def forward_jsonrpc(
     except urllib.error.HTTPError as exc:
         next_session_id = exc.headers.get("mcp-session-id") if exc.headers else session_id
         body = exc.read().decode("utf-8", errors="replace")
+        if exc.code == 401 and not api_key:
+            return missing_key_auth_response(message), next_session_id or session_id
         if "id" in message:
             return (
                 [
@@ -133,6 +168,10 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     endpoint = opts["endpoint"]
     api_key = opts["api_key"]
+    if not api_key:
+        sys.stderr.write(f"{MISSING_KEY_NOTICE}\n")
+        sys.stderr.flush()
+
     session_id = ""
 
     for raw_line in sys.stdin:

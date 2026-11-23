@@ -2,6 +2,8 @@
 import readline from "node:readline";
 
 const DEFAULT_ENDPOINT = process.env.HELVE_MCP_URL || "https://helve.dev/mcp";
+export const MISSING_KEY_URL = "https://helve.dev/k/npm";
+export const MISSING_KEY_NOTICE = `No HELVE_API_KEY — get one with $1 free credit at ${MISSING_KEY_URL}`;
 
 export function parseArgs(argv) {
   let endpoint = DEFAULT_ENDPOINT;
@@ -32,6 +34,37 @@ export function extractJsonFromSse(text) {
   return messages;
 }
 
+export function missingKeyAuthResponse(message) {
+  if (!message || message.id === undefined) return [];
+  if (message.method === "tools/call") {
+    return [
+      {
+        jsonrpc: "2.0",
+        id: message.id,
+        result: {
+          isError: true,
+          content: [
+            {
+              type: "text",
+              text: `${MISSING_KEY_NOTICE} (set HELVE_API_KEY in your MCP client config).`,
+            },
+          ],
+        },
+      },
+    ];
+  }
+  return [
+    {
+      jsonrpc: "2.0",
+      id: message.id,
+      error: {
+        code: -32001,
+        message: MISSING_KEY_NOTICE,
+      },
+    },
+  ];
+}
+
 export async function forwardJsonRpc(message, { endpoint = DEFAULT_ENDPOINT, apiKey = "", sessionId = "", fetchImpl = fetch } = {}) {
   const headers = {
     "Content-Type": "application/json",
@@ -54,6 +87,10 @@ export async function forwardJsonRpc(message, { endpoint = DEFAULT_ENDPOINT, api
   const contentType = res.headers?.get?.("content-type") || "";
   const text = await res.text();
 
+  if (res.status === 401 && !apiKey) {
+    return { responses: missingKeyAuthResponse(message), sessionId: nextSessionId };
+  }
+
   if (!text || res.status === 202 || res.status === 204) {
     return { responses: [], sessionId: nextSessionId };
   }
@@ -71,6 +108,10 @@ async function main() {
   if (opts.help) {
     process.stderr.write("Usage: helve-mcp [--url https://helve.dev/mcp] [--api-key <HELVE_API_KEY>]\n");
     process.exit(0);
+  }
+
+  if (!opts.apiKey) {
+    process.stderr.write(`${MISSING_KEY_NOTICE}\n`);
   }
 
   let sessionId = "";
