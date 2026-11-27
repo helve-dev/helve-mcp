@@ -10,6 +10,8 @@
 [![Website](https://img.shields.io/badge/web-helve.dev-green)](https://helve.dev)
 [![Docs](https://img.shields.io/badge/docs-helve.dev-black)](https://docs.helve.dev)
 [![llms.txt](https://img.shields.io/badge/llms.txt-helve.dev-purple)](https://helve.dev/llms.txt)
+[![helve-dev/helve-mcp MCP server](https://glama.ai/mcp/servers/helve-dev/helve-mcp/badges/score.svg)](https://glama.ai/mcp/servers/helve-dev/helve-mcp)
+[![Helve MCP connector](https://glama.ai/mcp/connectors/dev.helve/helve/badges/score.svg)](https://glama.ai/mcp/connectors/dev.helve/helve)
 
 **MCP + Code Mode ready — 0% per-call markup, $0/mo subscription, $1.00 free starter credit & non-expiring $5 / $10 / $25 / $100 prepaid packs.** One `HELVE_API_KEY` gives agents 324 tools across 257 providers (LLMs, audio, email, PDF, browser, finance + web) over both **MCP (`https://helve.dev/mcp`)** and **scriptable REST/`fetch` (`https://helve.dev/v1/...`)**, with per-key `spend_limit_usd` caps on every tier and $0 failed-call escrow.
 
